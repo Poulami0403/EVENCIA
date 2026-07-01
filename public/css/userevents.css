@@ -1,0 +1,209 @@
+/* body {
+    background: #f5f7fb;
+}
+
+.page-title {
+    font-weight: 700;
+    color: #2d2d2d;
+    margin-bottom: 30px;
+}
+
+.event-card {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background: #fff;
+}
+
+.event-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.event-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.event-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.event-desc {
+    color: #666;
+    font-size: 14px;
+    min-height: 60px;
+}
+
+.event-info {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+.event-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #6f42c1;
+    margin-bottom: 20px;
+}
+
+.book-btn {
+    background: #6f42c1;
+    border: none;
+    border-radius: 12px;
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+    background: #5a32a3;
+    color: white;
+    transform: scale(1.03);
+}
+
+.alert {
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .event-title {
+        font-size: 20px;
+    }
+
+    .event-image {
+        height: 200px;
+    }
+} */
+
+body {
+        background-color: #f8f9fa;
+        color: #212529;
+    }
+    .search-input {
+        border-radius: 10px;
+        border: 1px solid #e0e0e0;
+        padding: 12px 20px;
+        font-size: 0.95rem;
+        background-color: #ffffff;
+    }
+    .search-input:focus {
+        box-shadow: none;
+        border-color: #6366f1;
+    }
+    .category-pill {
+        border-radius: 50px;
+        padding: 8px 20px;
+        font-size: 0.85rem;
+        font-weight: 500;
+        background-color: #e9ecef;
+        color: #495057;
+        border: none;
+        transition: all 0.2s ease;
+    }
+    .category-pill.active {
+        background-color: #2b438c;
+        color: #ffffff;
+    }
+    .event-card {
+        border: none;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.03);
+    }
+    .image-container {
+        position: relative;
+    }
+    .category-badge {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(4px);
+        color: #333;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .event-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 4px;
+    }
+    .event-desc {
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-bottom: 16px;
+    }
+    .meta-text {
+        font-size: 0.9rem;
+        color: #6c757d;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 8px;
+    }
+    .meta-text strong {
+        color: #495057;
+        font-weight: 500;
+    }
+    .price-text {
+        font-size: 1rem;
+        color: #4b3ba7;
+        font-weight: 700;
+    }
+    .btn-book-now {
+        background-color: #5c46e4;
+        color: #ffffff;
+        border: none;
+        border-radius: 8px;
+        padding: 12px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: background-color 0.2s ease;
+    }
+    .btn-book-now:hover {
+        background-color: #4a34cb;
+        color: #ffffff;
+    }
+    .btn-no-shows {
+        background-color: #dbe0e6;
+        color: #7a828a;
+        border: none;
+        border-radius: 8px;
+        padding: 12px;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+    .input-group {
+    border-radius: 50px;
+    background: #fff;
+    }
+
+    .form-control:focus {
+        box-shadow: none;
+        border-color: transparent;
+    }
+
+    .input-group:focus-within {
+        box-shadow: 0 0 0 3px rgba(59, 47, 201, 0.15);
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #2e22c2 !important;
+    }

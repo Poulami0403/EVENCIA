@@ -1,0 +1,90 @@
+body{
+    background:#f4f6f9;
+    font-family:'Poppins',sans-serif;
+}
+
+.page-header h2{
+    color:#1f2937;
+}
+
+.card{
+    border-radius:20px;
+}
+
+.form-control,
+.form-select{
+    border-radius:12px;
+    padding:12px 15px;
+}
+
+.form-control:focus,
+.form-select:focus{
+    box-shadow:0 0 0 0.2rem rgba(13,110,253,.15);
+}
+
+.btn{
+    border-radius:10px;
+}
+body{
+        background:#f4f6f9;
+        font-family:'Poppins',sans-serif;
+    }
+
+    .page-header h2{
+        color:#1f2937;
+        font-size:32px;
+    }
+
+    .page-header p{
+        font-size:15px;
+        color:#6b7280;
+    }
+
+    .card{
+        border:none;
+        border-radius:20px;
+        box-shadow:0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .card-body{
+        padding:40px;
+    }
+
+    .form-label{
+        color:#374151;
+        margin-bottom:8px;
+    }
+
+    .form-control,
+    .form-select{
+        height:55px;
+        border-radius:12px;
+        border:1px solid #d1d5db;
+    }
+
+    textarea.form-control{
+        height:auto;
+    }
+
+    .form-control:focus,
+    .form-select:focus{
+        border-color:#4f46e5;
+        box-shadow:0 0 0 0.15rem rgba(79,70,229,0.15);
+    }
+
+    .btn-primary{
+        background:#4f46e5;
+        border:none;
+        border-radius:12px;
+        padding:12px 30px;
+    }
+
+    .btn-outline-secondary{
+        border-radius:12px;
+        padding:12px 30px;
+    }
+
+    .main-content{
+        min-height:100vh;
+        background:#f4f6f9;
+    }
