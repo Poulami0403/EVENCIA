@@ -135,8 +135,10 @@ class ShowController extends Controller
         return redirect()->route('admin.shows.index') ->with('success', 'Show deleted successfully');
     }
 
-    public function eventShows(Event $event)
+    public function eventShows($id)
     {
+        $id = decrypt($id);
+        $event = Event::findOrFail($id);
         $shows = Show::where('event_id', $event->id)
                     ->orderBy('show_date')
                     ->orderBy('show_time')

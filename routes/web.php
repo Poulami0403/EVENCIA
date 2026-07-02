@@ -12,6 +12,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserEventController;
 use App\Http\Controllers\AdminManagementController;
 use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -54,7 +55,7 @@ Route::middleware(['auth', 'admin'])
     Route::get('/events/{event}/shows', [ShowController::class, 'eventShows'])
         ->name('admin.events.shows');
     // Venues
-    Route::resource('venues', VenueController::class)
+    Route::resource('/venues', VenueController::class)
         ->names('admin.venues');
 
     // Seats
@@ -68,6 +69,12 @@ Route::middleware(['auth', 'admin'])
     // Shows
     Route::resource('shows', ShowController::class)
         ->names('admin.shows');
+    
+    Route::resource('users', UserController::class)
+    ->names('admin.users');
+
+    Route::patch('/users/{user}/status', [UserController::class, 'updateStatus'])
+    ->name('admin.users.updateStatus');
 
     // Admin Bookings
     Route::get('/bookings',

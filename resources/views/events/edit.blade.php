@@ -25,7 +25,7 @@ use Illuminate\Support\Facades\Session;
             <div class="form-card">
                 <h2 class="text-center mb-4 fw-bold text-dark">Edit Event</h2>
 
-                <form action="{{ route('admin.events.update', $event->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.events.update', encrypt($event->id)) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
 

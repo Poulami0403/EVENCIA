@@ -152,7 +152,7 @@
                         {{ $show->event->duration }} min <span class="mx-2">•</span> {{ $show->venue->venue_name }} <span class="mx-2">•</span>{{ $show->show_date }}<span class="mx-2">•</span> {{ $show->show_time }}
                     </p>
 
-                    <a href="{{ route('bookings.layout',$show->id) }}"
+                    <a href="{{ route('bookings.layout',encrypt($show->id)) }}"
                     class="btn btn-bms-primary">
                     Book Tickets
                     </a>
@@ -164,10 +164,9 @@
     <div class="container my-5">
         <div class="row">
             <div class="col-md-8">
-                <h3 class="fw-bold mb-3 fs-4 text-dark">About the movie</h3>
-                <p class="text-dark mb-2 fw-medium">Yeh jungle toh safe hai, par yeh log? Bilkul nahi!</p>
+                <h3 class="fw-bold mb-3 fs-4 text-dark">About the Event</h3>
                 <p class="text-secondary text-justify lead fs-6">
-                    Welcome to the Jungle is a Hindi movie starring Akshay Kumar, Suniel Shetty, Arshad Warsi, Raveena Tandon, Lara Dutta and many others in pivotal comic-action roles.
+                    {{ $show->event->event_details }}
                 </p>
             </div>
         </div>

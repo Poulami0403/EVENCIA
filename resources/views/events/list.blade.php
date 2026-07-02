@@ -52,12 +52,12 @@
 
                                 <div class="d-flex gap-2">
 
-                                    <a href="{{ route('admin.events.edit',$event->id) }}"
+                                    <a href="{{ route('admin.events.edit',encrypt($event->id)) }}"
                                        class="btn btn-primary w-50">
                                         Edit
                                     </a>
 
-                                    <a href="{{ route('admin.events.shows', $event->id) }}"
+                                    <a href="{{ route('admin.events.shows', encrypt($event->id)) }}"
                                         class="btn btn-sm btn-info">
                                         Manage Shows
                                     </a>
@@ -69,7 +69,7 @@
                                     </a>
 
                                     <form id="dlt{{ $event->id }}"
-                                          action="{{ route('admin.events.destroy',$event->id) }}"
+                                          action="{{ route('admin.events.destroy',encrypt($event->id)) }}"
                                           method="POST"
                                           class="d-none">
                                         @csrf

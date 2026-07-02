@@ -94,7 +94,10 @@ use Illuminate\Support\Facades\Session;
                                         @endif
                                     </td>
                                     <td>
-                                        <a href="{{route('admin.venues.edit',$venue->id)}}" class= "btn btn-primary">Edit</a>
+                                        <a href="{{ route('admin.venues.edit', encrypt($venue->id)) }}"
+                                        class="btn btn-primary">
+                                            Edit
+                                        </a>
                                         <a href="#"
                                        onclick="deleteTask({{ $venue->id }}); return false;"
                                        class="btn btn-danger">
@@ -102,7 +105,7 @@ use Illuminate\Support\Facades\Session;
                                     </a>
 
                                     <form id="dlt{{ $venue->id }}"
-                                          action="{{ route('admin.venues.destroy',$venue->id) }}"
+                                          action="{{ route('admin.venues.destroy',encrypt($venue->id)) }}"
                                           method="POST"
                                           class="d-none">
                                         @csrf

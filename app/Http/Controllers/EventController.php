@@ -50,13 +50,16 @@ class EventController extends Controller
         return redirect()->route('admin.events.index')->with('success', 'Event created successfully');
     }
     public function edit($id){
+        $id = decrypt($id);
         $event = Event::findorFail($id);
         return view('events.edit',[
             'event'=>$event
         ]);
     }
-    public function update(Request $request, Event $event)
+    public function update(Request $request, $id)
 {
+    $id = decrypt($id);
+    $event = Event::findOrFail($id);
     $request->validate([
         'event_name' => 'required|max:255',
         'event_details' => 'required',

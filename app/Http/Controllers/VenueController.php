@@ -59,12 +59,17 @@ class VenueController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Venue $venue)
-    {
-        return view('venues.edit',[
-            'venue'=>$venue
-        ]);
+    public function edit($venue)
+{
+    try {
+        $id = decrypt($venue);
+        $venue = Venue::findOrFail($id);
+
+        return view('venues.edit', compact('venue'));
+    } catch (\Exception $e) {
+        abort(404); // prevents payload crash
     }
+}
 
     /**
      * Update the specified resource in storage.

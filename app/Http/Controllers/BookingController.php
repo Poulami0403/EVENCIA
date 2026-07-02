@@ -119,6 +119,7 @@ class BookingController extends Controller
 
     public function layout($id)
     {
+        $id = decrypt($id);
         $show = Show::findOrFail($id);
         $showSeats = ShowSeat::with('seat')->where('show_id', $id)->get();
 
